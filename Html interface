@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>House Price Predictor</title></head>
+<body>
+  <h2>Enter House Details:</h2>
+  <form onsubmit="predict(); return false;">
+    Area: <input type="number" id="area"><br>
+    Bedrooms: <input type="number" id="bed"><br>
+    Bathrooms: <input type="number" id="bath"><br>
+    <button>Predict</button>
+  </form>
+  <p id="result"></p>
+  <script>
+    function predict() {
+      // Simulate price calculation (dummy)
+      let price = (document.getElementById('area').value * 500) + 
+                  (document.getElementById('bed').value * 100000);
+      document.getElementById('result').innerText = "Estimated Price: ₹" + price;
+    }
+  </script>
+</body>
+</html>
